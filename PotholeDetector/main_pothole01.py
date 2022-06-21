@@ -7,7 +7,7 @@ with open('pothole.names', 'rt') as f:
 print(classesNomes)
 
 # Classificador
-#classifier = cv2.xphoto.createTonemapDurand()
+classificador = cv2.CascadeClassifier()
 
 
 def getPictureByName():
@@ -35,8 +35,9 @@ def getPictureByName():
 
 classes, potholes = getPictureByName()
 print(classes)
-try:
-    classifier.train(potholes, classes)
+classificador(potholes, classes)
+"""try:
+    classificador.train(potholes, classes)
 except:
-    print("Erro")
+    print("Erro")"""
 
