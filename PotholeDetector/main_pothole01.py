@@ -7,7 +7,7 @@ with open('pothole.names', 'rt') as f:
 print(classesNomes)
 
 # Classificador
-classificador = cv2.CascadeClassifier()
+classificador = cv2.BaseCascadeClassifier()
 
 
 def getPictureByName():
